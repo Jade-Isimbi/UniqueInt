@@ -40,7 +40,7 @@ def readNextItemFromFile(self, inputFilePath):
             for number in unique_num:
                 output_file.write(f"{number}\n"
                         )
-                if __name__ == "__main__":
+if __name__ == "__main__":
     input_folder = "/home/jade/UniqueInt/inputs"
     output_folder = "/home/jade/UniqueInt/results"
 
