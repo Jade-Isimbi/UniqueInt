@@ -11,7 +11,8 @@ class UniqueInt:
         """
         unique_num = self.readNextItemFromFile(inputFilePath)
         self.write_unique_integers(unique_num, outputFilePath)
-def readNextItemFromFile(self, inputFilePath):
+
+    def readNextItemFromFile(self, inputFilePath):
         """
         Reads integers from the input file, ensuring each integer is within the valid range and unique.
         Returns a sorted list of unique integers.
@@ -38,12 +39,12 @@ def readNextItemFromFile(self, inputFilePath):
         """
         with open(outputFilePath, 'w') as output_file:
             for number in unique_num:
-                output_file.write(f"{number}\n"
-                        )
+                output_file.write(f"{number}\n")
+
 if __name__ == "__main__":
     input_folder = "/home/jade/UniqueInt/inputs"
     output_folder = "/home/jade/UniqueInt/results"
-
+    
     unique_int_processor = UniqueInt()
 
     for filename in os.listdir(input_folder):
