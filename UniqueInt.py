@@ -38,4 +38,23 @@ def readNextItemFromFile(self, inputFilePath):
         """
         with open(outputFilePath, 'w') as output_file:
             for number in unique_num:
-                output_file.write(f"{number}\n")
+                output_file.write(f"{number}\n"
+                        )
+                if __name__ == "__main__":
+    input_folder = "/home/jade/UniqueInt/inputs"
+    output_folder = "/home/jade/UniqueInt/results"
+
+    unique_int_processor = UniqueInt()
+
+    for filename in os.listdir(input_folder):
+        if filename.endswith(".txt"):
+            input_path = os.path.join(input_folder, filename)
+            output_path = os.path.join(output_folder, f"{filename}_results.txt")
+
+            # Timing for each file
+            start_time = time.time()
+            unique_int_processor.processFile(input_path, output_path)
+            end_time = time.time()
+
+            print(f"Processed {filename} in {end_time - start_time:.4f} seconds")
+
