@@ -17,7 +17,7 @@ class UniqueInt:
         Reads integers from the input file, ensuring each integer is within the valid range and unique.
         Returns a sorted list of unique integers.
         """
-        unique_num = set()
+        
         
         with open(inputFilePath, 'r') as input_file:
             for line in input_file:
